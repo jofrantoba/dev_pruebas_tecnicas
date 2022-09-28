@@ -1,0 +1,37 @@
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:tns="http://parameter.com/apisoap/ws"
+    targetNamespace="http://parameter.com/apisoap/ws" 
+    elementFormDefault="qualified">
+    <xs:element name="EmpleadoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="empleado" type="tns:Empleado"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+ 
+    <xs:element name="EmpleadoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="empleado" type="tns:Empleado"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Empleado">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="0"/>
+            <xs:element name="version" type="xs:long" minOccurs="0"/>
+            <xs:element name="isPersistente" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="operacion" type="xs:string" minOccurs="0"/>
+            <xs:element name="nombres" type="xs:string" minOccurs="0"/>
+            <xs:element name="apellidos" type="xs:string" minOccurs="0"/>
+            <xs:element name="tipoDocumento" type="xs:string" minOccurs="0"/>
+            <xs:element name="numeroDocumento" type="xs:string" minOccurs="0"/>            
+            <xs:element name="fechaNacimiento" type="xs:date" minOccurs="0"/>
+            <xs:element name="fechaVinculacion" type="xs:date" minOccurs="0"/>                        
+            <xs:element name="cargo" type="xs:string" minOccurs="0"/>
+            <xs:element name="salario" type="xs:decimal" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
