@@ -3,3 +3,4 @@
 **/log/**
 **/target/**
 .jar
+/.project

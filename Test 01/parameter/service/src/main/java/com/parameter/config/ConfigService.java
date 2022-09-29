@@ -13,7 +13,8 @@ import org.springframework.context.annotation.Configuration;
  * @author jona
  */
 @Configuration
-@ComponentScan(basePackages = { "com.parameter.service","com.parameter.dao","com.paramter.entity"})
-public class ConfigService {
+//@ComponentScan(basePackages = { "com.parameter.service","com.parameter.dao","com.paramter.entity"})
+@ComponentScan(basePackages = { "com.parameter.service"})
+public class ConfigService {    
     
 }

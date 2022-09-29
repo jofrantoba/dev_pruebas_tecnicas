@@ -12,7 +12,6 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.parameter.service.inter.InterServiceEmpleado;
-import javax.transaction.Transactional;
 import org.hibernate.Transaction;
 
 /**
@@ -26,7 +25,6 @@ public class ServiceEmpleadoImpl implements InterServiceEmpleado{
     @Autowired    
     private InterDaoEmpleado daoEmpleado;
     
-    //@Transactional
     @Override
     public Empleado saveEmpleado(Empleado entidad) throws UnknownException {        
             Transaction tx=daoEmpleado.getSession().beginTransaction();

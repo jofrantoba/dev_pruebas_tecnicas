@@ -6,9 +6,10 @@
 package com.parameter.dao.impl;
 
 import com.jofrantoba.model.jpa.daoentity.AbstractJpaDao;
-import com.jofrantoba.model.jpa.psf.PSF;
 import com.parameter.dao.inter.InterDaoEmpleado;
 import com.parameter.entity.Empleado;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 
@@ -19,12 +20,13 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class DaoEmpleado extends AbstractJpaDao<Empleado>
-        implements InterDaoEmpleado {
+        implements InterDaoEmpleado {    
 
-    public DaoEmpleado() {
+       
+    public DaoEmpleado(@Qualifier("sessionFactory")SessionFactory sessionFactory) {
         super();
         setClazz(Empleado.class);
-        this.setSessionFactory(PSF.getClassPSF().getPSFStatic());
+        this.setSessionFactory(sessionFactory);
     }
 
 }

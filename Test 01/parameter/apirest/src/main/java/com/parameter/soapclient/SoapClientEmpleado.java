@@ -7,7 +7,6 @@ package com.parameter.soapclient;
 import com.parameter.apisoap.ws.EmpleadoRequest;
 import com.parameter.apisoap.ws.EmpleadoResponse;
 import com.parameter.entity.Empleado;
-import javax.xml.bind.JAXBElement;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;

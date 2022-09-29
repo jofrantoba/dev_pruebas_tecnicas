@@ -8,7 +8,6 @@ package com.parameter.apirest.ws;
 import com.jofrantoba.model.jpa.shared.UnknownException;
 import com.parameter.apisoap.ws.EmpleadoRequest;
 import com.parameter.entity.Empleado;
-import com.parameter.service.inter.InterServiceEmpleado;
 import com.parameter.soapclient.SoapClientEmpleado;
 import java.util.Date;
 import lombok.extern.slf4j.Slf4j;
@@ -27,11 +26,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("parameta")
 public class RestEmpleado {
-    
-    /*@Autowired    
-    private InterServiceEmpleado serviceEmpleado;*/
-    
-    @Autowired    
+
+    @Autowired
     private SoapClientEmpleado soapClientEmpleado;
 
     @PostMapping(
@@ -39,15 +35,13 @@ public class RestEmpleado {
             consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     public Empleado saveEmpleado(@RequestBody Empleado entidad) throws UnknownException {
-        entidad.setIsPersistente(Boolean.TRUE);
-        entidad.setVersion((new Date()).getTime());
-        EmpleadoRequest request=new EmpleadoRequest();
+        EmpleadoRequest request = new EmpleadoRequest();
         request.setEmpleado(entidad);
-        Empleado entity=soapClientEmpleado.saveEmpleado(request);
-        Date fechaActual=new Date();
-        Date fechaVinculacion=entity.getFechaVinculacion();
-        Date fechaNacimiento=entity.getFechaNacimiento();
-        long diffVinculacion=fechaActual.getTime()-fechaVinculacion.getTime();
-        return entity;
+        Empleado entity = soapClientEmpleado.saveEmpleado(request);
+        Date fechaActual = new Date();
+        Date fechaVinculacion = entity.getFechaVinculacion();
+        Date fechaNacimiento = entity.getFechaNacimiento();
+        long diffVinculacion = fechaActual.getTime() - fechaVinculacion.getTime();
+        return entidad;
     }
 }
