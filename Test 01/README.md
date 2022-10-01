@@ -59,9 +59,12 @@ primary key(id)
 - entity
 - dao
 - service
-- apirest
+- web service rest
+- web service soap
 
 # Dependencia del modulo jpa - config mysql
+Librería que existiende métodos hibernate, independiente de spring framework
+Compatible para usarlo con spring framework con springboot
 https://github.com/Jofrantoba-Coding/jofrantoba-model-jpa
 
 # Tecnología usada:
