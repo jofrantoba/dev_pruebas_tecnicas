@@ -12,6 +12,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.parameter.service.inter.InterServiceEmpleado;
+import java.util.Date;
 import org.hibernate.Transaction;
 
 /**
@@ -28,6 +29,8 @@ public class ServiceEmpleadoImpl implements InterServiceEmpleado{
     @Override
     public Empleado saveEmpleado(Empleado entidad) throws UnknownException {        
             Transaction tx=daoEmpleado.getSession().beginTransaction();
+            entidad.setIsPersistente(Boolean.TRUE);
+            entidad.setVersion((new Date()).getTime());
             daoEmpleado.save(entidad);
             tx.commit();                        
             return entidad;

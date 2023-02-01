@@ -13,7 +13,8 @@ import org.springframework.context.annotation.Configuration;
  * @author jona
  */
 @Configuration
-@ComponentScan(basePackages = {"com.parameter.soapclient","com.parameter.apisoap.ws","com.parameter.apirest.ws"})
+//@ComponentScan(basePackages = {"com.parameter.soapclient","com.parameter.apisoap.ws","com.parameter.apirest.ws"})
+@ComponentScan(basePackages = {"com.parameter"})
 public class ConfigRest {
     
 }

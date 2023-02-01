@@ -25,8 +25,8 @@ public class TestServiceEmpleadoImpl extends TestBaseService {
         emp.setNombres("Jonathan");
         emp.setApellidos("Torres");
         emp.setCargo("Developer");
-        //emp.setFechaNacimiento(new Date());
-        //emp.setFechaVinculacion(new Date());
+        emp.setFechaNacimiento(new Date());
+        emp.setFechaVinculacion(new Date());
         emp.setIsPersistente(Boolean.TRUE);
         emp.setNumeroDocumento("45329234");
         emp.setSalario(BigDecimal.ZERO);

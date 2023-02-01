@@ -13,5 +13,5 @@ import com.parameter.entity.Empleado;
  * @author jona
  */
 public interface InterServiceEmpleado {    
-    Empleado saveEmpleado(Empleado entidad)throws UnknownException;
+    Empleado saveEmpleado(Empleado entidad)throws UnknownException;    
 }

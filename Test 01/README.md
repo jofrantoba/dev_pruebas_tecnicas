@@ -1,4 +1,4 @@
-# parametareto
+# Reto
 
 Implementar en Java un servicio Rest que reciba como parámetros los atributos del objeto
 empleado (que será descrito más adelante) al ser invocado mediante el método GET.

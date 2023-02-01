@@ -11,6 +11,7 @@
         <module>entity</module>
         <module>dao</module>
         <module>service</module>
+        <module>shared</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

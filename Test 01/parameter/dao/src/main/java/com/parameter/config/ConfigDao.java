@@ -36,7 +36,7 @@ public class ConfigDao {
     }
     
     private ConnectionPropertiesMysql getCnx(){
-        ConnectionPropertiesMysql cnx=new ConnectionPropertiesMysql("172.16.1.10",3306,"demotiktok","jofrantoba","password");
+        ConnectionPropertiesMysql cnx=new ConnectionPropertiesMysql("172.16.1.10",3306,"demotiktok","usertiktok","usertiktok");
         return cnx;
     }
 }
